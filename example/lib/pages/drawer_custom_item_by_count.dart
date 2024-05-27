@@ -41,14 +41,14 @@ class _DrawerCustomItemByCountState extends State<DrawerCustomItemByCount> {
                         "John Witch",
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle1
+                            .titleMedium
                             ?.copyWith(color: Colors.white),
                       ),
                       Text(
                         "test123@gmail.com",
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle2
+                            .titleSmall
                             ?.copyWith(color: Colors.white.withAlpha(200)),
                       )
                     ],
@@ -84,12 +84,12 @@ class _DrawerCustomItemByCountState extends State<DrawerCustomItemByCount> {
           builder: (BuildContext context, int index, bool isSelected) {
             return Container(
               color: isSelected
-                  ? Theme.of(context).accentColor.withOpacity(0.7)
+                  ? Theme.of(context).colorScheme.secondary.withOpacity(0.7)
                   : Colors.transparent,
               padding: EdgeInsets.fromLTRB(24, 16, 24, 16),
               child: Text(
                 "Item $index",
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: isSelected ? Colors.black87 : Colors.white70),
               ),
             );

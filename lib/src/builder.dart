@@ -63,7 +63,7 @@ class MenuSideDrawerBuilder<IdType>
     Color selectorColor =
         drawer?.selectorColor ?? Theme.of(context).indicatorColor;
     TextStyle? textStyle = drawer?.textStyle ??
-        Theme.of(context).textTheme.subtitle1?.copyWith(
+        Theme.of(context).textTheme.titleMedium?.copyWith(
             color: (drawer?.color.computeLuminance() ?? 0) < 0.5
                 ? Colors.white
                 : Colors.black);

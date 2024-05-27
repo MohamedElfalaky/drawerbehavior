@@ -42,14 +42,14 @@ class _DrawerCustomItemState extends State<DrawerCustomItem> {
                         "John Witch",
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle1
+                            .titleMedium
                             ?.copyWith(color: Colors.white),
                       ),
                       Text(
                         "test123@gmail.com",
                         style: Theme.of(context)
                             .textTheme
-                            .subtitle2
+                            .titleSmall
                             ?.copyWith(color: Colors.white.withAlpha(200)),
                       )
                     ],
@@ -85,12 +85,12 @@ class _DrawerCustomItemState extends State<DrawerCustomItem> {
               (BuildContext context, MenuItem menuItem, bool isSelected) {
             return Container(
               color: isSelected
-                  ? Theme.of(context).accentColor.withOpacity(0.7)
+                  ? Theme.of(context).colorScheme.secondary.withOpacity(0.7)
                   : Colors.transparent,
               padding: EdgeInsets.fromLTRB(24, 16, 24, 16),
               child: Text(
                 menuItem.title,
-                style: Theme.of(context).textTheme.subtitle1?.copyWith(
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(
                     color: isSelected ? Colors.black87 : Colors.white70),
               ),
             );
